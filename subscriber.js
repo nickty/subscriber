@@ -3,7 +3,7 @@ const mqtt = require("mqtt");
 const client = mqtt.connect("ws://broker.hivemq.com:8000/mqtt");
 
 client.on("connect", function () {
-  client.subscribe("test/topic", function (err) {
+  client.subscribe("print/job", function (err) {
     if (!err) {
       console.log("Subscriber connected and subscribed.");
     } else {
